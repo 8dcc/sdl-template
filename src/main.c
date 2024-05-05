@@ -33,7 +33,7 @@ int main(void) {
 
     /* Create SDL window */
     SDL_Window* sdl_window =
-      SDL_CreateWindow("Langton's ant", SDL_WINDOWPOS_CENTERED,
+      SDL_CreateWindow("TODO: Title", SDL_WINDOWPOS_CENTERED,
                        SDL_WINDOWPOS_CENTERED, WINDOW_W, WINDOW_H, 0);
     if (!sdl_window)
         die("Error creating SDL window.");
