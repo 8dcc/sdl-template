@@ -1,6 +1,6 @@
 
 CC=gcc
-CFLAGS=-Wall -Wextra
+CFLAGS=-Wall -Wextra -Wpedantic
 LDFLAGS=$(shell sdl2-config --cflags --libs)
 
 # TODO: Add object files and rename
@@ -22,7 +22,7 @@ clean:
 #-------------------------------------------------------------------------------
 
 $(BIN): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 obj/%.c.o : src/%.c
 	@mkdir -p $(dir $@)
