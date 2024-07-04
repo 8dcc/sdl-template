@@ -1,6 +1,6 @@
 
 CC=gcc
-CFLAGS=-Wall -Wextra -Wpedantic
+CFLAGS=-std=gnu99 -Wall -Wextra -Wpedantic -ggdb3
 LDFLAGS=$(shell sdl2-config --cflags --libs)
 
 # TODO: Add object files and rename
