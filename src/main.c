@@ -22,11 +22,12 @@ static void die(const char* fmt, ...) {
     va_start(va, fmt);
 
     vfprintf(stderr, fmt, va);
-    putc('\n', stderr);
+    fputc('\n', stderr);
 
     if (g_window != NULL)
         SDL_DestroyWindow(g_window);
 
+    va_end(va);
     SDL_Quit();
     exit(1);
 }
