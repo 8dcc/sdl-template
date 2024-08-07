@@ -1,7 +1,7 @@
 
 CC=gcc
-CFLAGS=-std=gnu99 -Wall -Wextra -Wpedantic -ggdb3
-LDFLAGS=$(shell sdl2-config --cflags --libs)
+CFLAGS=-std=gnu99 -Wall -Wextra -Wpedantic -ggdb3 $(shell sdl2-config --cflags)
+LDFLAGS=$(shell sdl2-config --libs)
 
 # TODO: Add object files and rename
 OBJ_FILES=main.c.o
